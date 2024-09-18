@@ -18,7 +18,7 @@ session_start();
   </tr>
   <tr>
     <td><a href="DistrictRegistration.php">District</a></td>
-  </tr>
+</tr>
   <tr>
     <td><a href="Place.php">Place</a></td>
   </tr>
