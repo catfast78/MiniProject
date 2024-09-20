@@ -97,7 +97,7 @@
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li class="has-children active">
-                  <a href="index.html">Home</a>
+                  <a href="SalonHome.php">Home</a>
                   <ul class="dropdown">
                     <li><a href="#">Menu One</a></li>
                     <li><a href="#">Menu Two</a></li>
