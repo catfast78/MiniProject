@@ -25,8 +25,14 @@ session_start();
 </head>
 
 <body>
-<a href="HomePage.php">Home</a>
-<table width="200" border="1">
+<a href="UserHome.php">Home</a>
+<hr>
+<div align="center">
+<h3>MyProfile</h3>
+<table width="200" border="1" align="center">
+<tr>
+      <td colspan="2" align="center"><img src="../Assets/Files/Users/<?php echo $data["user_photo"]; ?>" width="100"/></td>
+</tr>
   <tr>
     <td width="74">Name</td>
     <td width="110"><?php echo $data["user_name"] ?></td>
@@ -43,5 +49,6 @@ session_start();
    
   </tr>
 </table>
+</div>
 </body>
 </html>

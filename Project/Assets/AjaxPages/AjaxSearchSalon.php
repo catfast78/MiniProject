@@ -32,8 +32,9 @@ include("../Connection/Connection.php");
     <td><?php echo $data["salon_address"]; ?></td> 
      
       
-    <td><?php echo $data["salon_photo"]; ?></td> 
-    <td><?php echo $data["salon_proof"]; ?></td> 
+    <td><img src="../Assets/Files/salon/photo/<?php echo $data["salon_photo"]; ?>" width="50"/></td> 
+    <td><img src="../Assets/Files/salon/Proof/<?php echo $data["salon_proof"]; ?>" width="50" /></td> 
+ 
  
     <td><a href="viewservice.php?did=<?php echo $data["salon_id"];?>">Services<a href="complaint.php?cid=<?php echo $data["salon_id"];?>">Complaints</td>
   </tr>

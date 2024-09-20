@@ -23,6 +23,9 @@ if(isset($_POST["btn_submit"]))
 </head>
 
 <body>
+  <a href="UserHome.php">Home</a>
+  <hr>
+  
 <form id="form1" name="form1" method="post" action="">
   <table width="200" border="1">
     <tr>

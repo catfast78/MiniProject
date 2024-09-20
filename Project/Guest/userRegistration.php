@@ -5,11 +5,13 @@ if(isset($_POST["btn_submit"]))
 	$name=$_POST["txt_name"];
 	$email=$_POST["txt_email"];
 	$pwd=$_POST["txt_pwd"];
+  $district=$_POST["sel_district"];
+	$place=$_POST["sel_place"];
 	$photo=$_FILES["File_photo"]["name"];
     $temp=$_FILES["File_photo"]["tmp_name"];
      move_uploaded_file($temp,"../Assets/Files/Users/".$photo);
 	
-	$insQry ="insert into tbl_user(user_name,user_email,user_password,user_photo) values('".$name."','".$email."','".$pwd."','".$photo."')";
+	$insQry ="insert into tbl_user(user_name,user_email,user_password,user_photo ,user_district,user_place) values('".$name."','".$email."','".$pwd."','".$photo."','".$district."','".$place."')";
      if($con->query($insQry))
 	 {
 		 
@@ -34,6 +36,7 @@ if(isset($_POST["btn_submit"]))
   <div align="center">
    <h1 align="center"> UserRegistration</h1>
     <table width="436" height="280" border="1">
+      
       <tr>
         <td width="254">Name</td>
         <td width="168"><label for="txt_name"></label>
