@@ -1,5 +1,5 @@
 <?php
-
+include("Head.php");
 include("../Assets/Connection/Connection.php");
 
 session_start();
@@ -64,3 +64,6 @@ if(isset($_POST["btn_submit"]))
 </form>
 </body>
 </html>
+<?php
+include("Foot.php");
+?>

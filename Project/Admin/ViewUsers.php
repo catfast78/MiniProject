@@ -1,4 +1,5 @@
 <?php
+include("Head.php");
 include("../Assets/Connection/Connection.php");
 session_start();
 
@@ -68,3 +69,4 @@ if(isset($_GET["did"]))
 </form>
 </body> 
 </html>
+<?php include("Foot.php"); ?>

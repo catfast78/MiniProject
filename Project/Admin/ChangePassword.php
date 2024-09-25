@@ -1,5 +1,7 @@
 
 <?php
+include("Head.php");
+
 
 include("../Assets/Connection/Connection.php");
 
@@ -82,3 +84,4 @@ if(isset($_POST["btnupdate"]))
 </form>
 </body>
 </html>
+<?php include("Foot.php");  ?>

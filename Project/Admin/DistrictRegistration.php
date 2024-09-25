@@ -1,4 +1,5 @@
 <?php
+include("Head.php");
 $dname="";
 $eid=0;
 
@@ -117,3 +118,6 @@ if(isset($_GET["did"]))
 </form>
 </body>
 </html>
+<?php
+include("Foot.php");
+?>

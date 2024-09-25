@@ -1,4 +1,6 @@
 <?php
+include("Head.php");
+
 include("../Assets/Connection/Connection.php");
 
  
@@ -74,8 +76,6 @@ if(isset($_GET["did"]))
     </tr>
   </table>
 </form>
-</body>
-</html>
 
 
  <br />
@@ -110,3 +110,8 @@ if(isset($_GET["did"]))
   }
   ?>
   </table>
+
+  
+</body>
+</html>
+<? include("Foot.php"); ?>
