@@ -1,4 +1,5 @@
 <?php
+include("Head.php");
 session_start();
 
 include("../Assets/Connection/Connection.php");
@@ -52,3 +53,6 @@ include("../Assets/Connection/Connection.php");
 </form>
 </body>
 </html>
+<?php
+include("Head.php");
+?>

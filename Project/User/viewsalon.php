@@ -1,4 +1,8 @@
 <?php
+ob_start();
+include("Head.php");
+
+
 include("../Assets/Connection/Connection.php");
 session_start();
 
@@ -12,7 +16,7 @@ session_start();
 </head>
 
 <body>
-<a href="UserHome.php">HOME</a>
+<!-- <a href="UserHome.php">HOME</a> -->
 <hr />
 <form >
 <table border="1">
@@ -117,3 +121,7 @@ session_start();
 
 </script>
 </html>
+<?php
+ob_flush();
+include("Foot.php");
+?>

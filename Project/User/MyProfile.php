@@ -1,11 +1,11 @@
 <?php
-ob.start();
+
+session_start();
 include("Head.php");
 
 
 include("../Assets/Connection/Connection.php");
 
-session_start();
 
 
 
@@ -56,5 +56,5 @@ session_start();
 </body>
 </html>
 <?php
-ob.flush();
 include("Foot.php")
+?>

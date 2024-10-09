@@ -1,5 +1,6 @@
 
 <?php
+include("Head.php");
 include("../Assets/Connection/Connection.php");
 
 if(isset($_POST["btn_submit"]))
@@ -38,3 +39,6 @@ if(isset($_POST["btn_submit"]))
 </form>
 </body>
 </html>
+<?php
+inlcude("Foot.php");
+?>

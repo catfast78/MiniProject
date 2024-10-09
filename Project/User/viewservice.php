@@ -1,4 +1,6 @@
 <?php
+ob.start();
+include("Head.php");
 include("../Assets/Connection/Connection.php");
 ?>
 
@@ -46,3 +48,7 @@ include("../Assets/Connection/Connection.php");
 </form>
 </body>
 </html>
+<?php
+ob.flush();
+include("Foot.php");
+?>

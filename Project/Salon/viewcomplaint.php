@@ -1,4 +1,6 @@
 <?php
+ob.start();
+include("Head.php");
 include("../Assets/Connection/Connection.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -55,3 +57,7 @@ include("../Assets/Connection/Connection.php");
 </form>
 </body>
 </html>
+<?php
+ob.flush();
+include("Foot.php");
+?>

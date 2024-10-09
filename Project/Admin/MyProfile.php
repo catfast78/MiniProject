@@ -1,9 +1,10 @@
 <?php
+
 include("Head.php");
 
 include("../Assets/Connection/Connection.php");
 
-session_start();
+//session_start();
 
 
 
@@ -46,4 +47,6 @@ session_start();
 </table>
 </body>
 </html>
-<?php include("Foot.php"); ?>
+<?php include("Foot.php");
+
+ ?>

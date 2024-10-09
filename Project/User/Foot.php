@@ -77,3 +77,21 @@
         </div>
       </div>
     </footer>
+    </div>
+
+  <script src="../Assets/Templates/Main/js/jquery-3.3.1.min.js"></script>
+  <script src="../Assets/Templates/Main/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../Assets/Templates/Main/js/jquery-ui.js"></script>
+  <script src="../Assets/Templates/Main/js/popper.min.js"></script>
+  <script src="../Assets/Templates/Main/js/bootstrap.min.js"></script>
+  <script src="../Assets/Templates/Main/js/owl.carousel.min.js"></script>
+  <script src="../Assets/Templates/Main/js/jquery.stellar.min.js"></script>
+  <script src="../Assets/Templates/Main/js/jquery.countdown.min.js"></script>
+  <script src="../Assets/Templates/Main/js/jquery.magnific-popup.min.js"></script>
+  <script src="../Assets/Templates/Main/js/bootstrap-datepicker.min.js"></script>
+  <script src="../Assets/Templates/Main/js/aos.js"></script>
+
+  <script src="../Assets/Templates/Main/js/main.js"></script>
+    
+  </body>
+</html>

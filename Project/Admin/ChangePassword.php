@@ -1,11 +1,12 @@
 
 <?php
 include("Head.php");
+include("SessionValidation.php");
 
 
 include("../Assets/Connection/Connection.php");
 
-session_start();
+//session_start();
 
 
 

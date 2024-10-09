@@ -1,4 +1,6 @@
 <?php
+include("Head.php");
+
 
 session_start();
 
@@ -98,3 +100,6 @@ if(isset($_POST["btn_submit"]))
 </table>
 </body>
 </html>
+<?php include("Foot.php");
+?>
+
