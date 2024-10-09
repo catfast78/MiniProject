@@ -1,4 +1,6 @@
 <?php
+ob.start();
+include("Head.php");
 session_start();
 
 include("../Assets/Connection/Connection.php");
@@ -51,3 +53,8 @@ if(isset($_POST["btn_submit"]))
 </form>
 </body>
 </html>
+<?php
+ob.flush();
+inlcude("Foot.php");
+
+?>

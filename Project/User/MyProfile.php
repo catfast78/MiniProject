@@ -1,4 +1,7 @@
 <?php
+ob.start();
+include("Head.php");
+
 
 include("../Assets/Connection/Connection.php");
 
@@ -52,3 +55,6 @@ session_start();
 </div>
 </body>
 </html>
+<?php
+ob.flush();
+include("Foot.php")

@@ -1,7 +1,8 @@
 <?php
 include("Head.php");
+// session_start();
+ob_start();
 include("../Assets/Connection/Connection.php");
-session_start();
 
 if(isset($_GET["did"]))
 {
@@ -69,4 +70,7 @@ if(isset($_GET["did"]))
 </form>
 </body> 
 </html>
-<?php include("Foot.php"); ?>
+<?php 
+include("Foot.php");
+ob_flush();
+ ?>
