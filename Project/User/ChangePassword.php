@@ -1,90 +1,117 @@
-
 <?php
-ob.start();
+ob_start();
 include("Head.php");
-
 include("../Assets/Connection/Connection.php");
-
 session_start();
 
+$message = "";
 
+if (isset($_POST["btnupdate"])) {
+    $current = $_POST["txtcurrent"];
+    $newpwd = $_POST["txtnew"];
+    $confirm = $_POST["txtconfirm"];
 
-$message="";
-	
-	
-	
-if(isset($_POST["btnupdate"]))
-{
-	$current=$_POST["txtcurrent"];
-	$newpwd=$_POST["txtnew"];
-	$confirm=$_POST["txtconfirm"];
-	
-	$selQry="select * from tbl_user where user_id='".$_SESSION["aid"]."' and user_password='".$current."'";
-  	$result= $con->query($selQry);
-  	if($data=$result->fetch_assoc())
-	{
-		if($newpwd==$confirm)
-		{
-			
-			$insQry ="update tbl_user set user_password='".$confirm."' where user_id='".$_SESSION["aid"]."'";
-     		if($con->query($insQry))
-	 		{
-					header("location:MyProfile.php");
-	 		}
-		}
-		else
-		{
-				$message="Password not same...";
-		}
-	}
-	else
-	{
-				$message="Please check old password...";
-	}
+    $selQry = "SELECT * FROM tbl_user WHERE user_id='" . $_SESSION["aid"] . "' AND user_password='" . $current . "'";
+    $result = $con->query($selQry);
+    if ($data = $result->fetch_assoc()) {
+        if ($newpwd == $confirm) {
+            $insQry = "UPDATE tbl_user SET user_password='" . $confirm . "' WHERE user_id='" . $_SESSION["aid"] . "'";
+            if ($con->query($insQry)) {
+                header("location:MyProfile.php");
+            }
+        } else {
+            $message = "Passwords do not match.";
+        }
+    } else {
+        $message = "Please check your current password.";
+    }
 }
- 		
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
 
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-submit {
+            width: 100%;
+        }
+
+        .alert-message {
+            text-align: center;
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
-<a href="UserHome.php">Home</a>
-<form id="form1" name="form1" method="post" action="">
-  <table width="391" height="185" border="1" align="center">
-    <tr>
-      <td>Current Password</td>
-      <td><label for="txtcurrent"></label>
-      <input type="text" name="txtcurrent" id="txtcurrent" /></td>
-    </tr>
-    <tr>
-      <td>New Password</td>
-      <td><label for="txtnew"></label>
-      <input type="text" name="txtnew" id="txtnew" /></td>
-    </tr>
-    <tr>
-      <td>Confirm Password</td>
-      <td><label for="txtconfirm"></label>
-      <input type="text" name="txtconfirm" id="txtconfirm" /></td>
-    </tr>
-    <tr>
-      <td colspan="2" align="center"><input type="submit" name="btnupdate" id="btnupdate" value="Submit" />
-      <input type="reset" name="btncancel" id="btncancel" value="Cancel" /></td>
-    </tr>
-    <tr>
-      <td colspan="2" align="center"><?php echo $message?></td>
-    </tr>
-  </table>
-</form>
+
+    <div class="container">
+        <div class="col-md-6 offset-md-3 form-container">
+            <h2 class="form-title">Change Password</h2>
+
+            <form id="form1" name="form1" method="post" action="">
+
+                <div class="mb-3">
+                    <label for="txtcurrent" class="form-label">Current Password</label>
+                    <input type="password" class="form-control" name="txtcurrent" id="txtcurrent" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="txtnew" class="form-label">New Password</label>
+                    <input type="password" class="form-control" name="txtnew" id="txtnew" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="txtconfirm" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" name="txtconfirm" id="txtconfirm" required>
+                </div>
+
+                <button type="submit" name="btnupdate" id="btnupdate" class="btn btn-primary btn-submit">Submit</button>
+                <button type="reset" name="btncancel" id="btncancel" class="btn btn-secondary btn-submit mt-2">Cancel</button>
+
+                <div class="alert-message mt-3"><?php echo $message; ?></div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional for components like modals) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
+
 <?php
-ob.flush();
+ob_flush();
 include("Foot.php");
 ?>

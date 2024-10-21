@@ -23,7 +23,9 @@
 </html> -->
 
 
-
+<?php
+include("SessionValidation.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -84,16 +86,7 @@
                   <a href="UserHome.php">Profile</a>
                   <ul class="dropdown">
                     <li><a href="MyProfile.php">My Profile</a></li>
-                    <li><a href="#">Menu Two</a></li>
-                    <li><a href="#">Menu Three</a></li>
-                    <li class="has-children">
-                      <a href="#">Sub Menu</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                      </ul>
-                    </li>
+                     
                   </ul>
                 </li>
                 <li class="has-children">
@@ -105,7 +98,7 @@
                 </li>
                  <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="../Guest/Login.php">Logout</a></li>
+                <li><a href="Logout.php">Logout</a></li>
                 
               </ul>
             </nav>
@@ -152,7 +145,7 @@
               <h5 class="text-white font-weight-light text-uppercase">Welcome to Hairsal</h5>
               <h2 class="text-white font-weight-light mb-2 display-1">Hair Salon Expert</h2>
 
-              <p><a href="viewsalon.php" class="btn btn-black py-3 px-5">Book Now!</a></p>
+               
             </div>
           </div>
         </div>
@@ -165,8 +158,7 @@
             <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
               <h2 class="text-white font-weight-light mb-2 display-1">Beautiful Hair, Healthy You!</h2>
 
-              <p><a href="#" class="btn btn-black py-3 px-5">Book Now!</a></p>
-            </div>
+             </div>
           </div>
         </div>
       </div>  
@@ -266,17 +258,7 @@
     </div>
 
 
-    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(../Assets/Templates/Main/images/hero_bg_2.jpg); background-attachment: fixed;">
-      <div class="container">
-        <div class="row align-items-center justify-content-center text-center">
-
-          <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
-            <h2 class="text-white font-weight-light mb-5 display-3">Experience Our Outstanding Services</h2>
-            <a href="https://vimeo.com/channels/staffpicks/93951774" class="play-single-big d-inline-block popup-vimeo"><span class="icon-play"></span></a>
-          </div>
-        </div>
-      </div>
-    </div>  
+     
 
     
     <footer class="site-footer">
@@ -293,17 +275,7 @@
           </div>
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="row mb-5">
-              <div class="col-md-12">
-                <h3 class="footer-heading mb-4">Quick Menu</h3>
-              </div>
-              <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Barbers</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Team</a></li>
-                </ul>
-              </div>
+              
               <div class="col-md-6 col-lg-6">
                 <ul class="list-unstyled">
                   <li><a href="#">About Us</a></li>

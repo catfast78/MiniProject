@@ -3,17 +3,22 @@ include("../Connection/Connection.php");
 
 ?>
 
- <table width="200" border="1">
-    <tr>
-      <td>SI.No.</td>
-      <td>Name</td>
-      <td>email</td>
-      <td>address</td>
-      
-      <td>Photo</td>
-      <td>Proof</td>
-      <td>Action</td>
-    </tr>
+<div class="container search-table">
+  <form id="form1" name="form1" method="post" action="">
+    <div id="search">
+      <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">SI. No.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Proof</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
     
       <?php
   $selQry="select * from tbl_salon where salon_place=".$_GET['did'];
@@ -36,10 +41,14 @@ include("../Connection/Connection.php");
     <td><img src="../Assets/Files/salon/Proof/<?php echo $data["salon_proof"]; ?>" width="50" /></td> 
  
  
-    <td><a href="viewservice.php?did=<?php echo $data["salon_id"];?>">Services<a href="complaint.php?cid=<?php echo $data["salon_id"];?>">Complaints</td>
+    <td><a href="viewservice.php?did=<?php echo $data["salon_id"];?>" class="btn btn-sm btn-primary">Services<a href="complaint.php?cid=<?php echo $data["salon_id"];?>" class="btn btn-sm btn-danger">Complaints</td>
   </tr>
   <?php
   }
      ?>  
    
-  </table>
+   </tbody>
+      </table>
+    </div>
+  </form>
+</div>
