@@ -39,7 +39,9 @@
 </body>
 </html> -->
 
-
+<?php
+include("SessionValidation.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -90,40 +92,27 @@
         <div class="row align-items-center">
           
           <div class="col-6 col-xl-2" data-aos="fade-down">
-            <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0">Hairsal</a></h1>
+            <h1 class="mb-0"><a href="SalonHome.php" class="text-black h2 mb-0">Hairsal</a></h1>
           </div>
           <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li class="has-children active">
-                  <a href="SalonHome.php">Home</a>
-                  <ul class="dropdown">
+                  
+                   
+                     
                     
-                    <li><a href="#">Menu Two</a></li>
-                    <li><a href="#">Menu Three</a></li>
-                    <li class="has-children">
-                      <a href="#">Sub Menu</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                      </ul>
-                    </li>
-                  </ul>
                 </li>
                 <li class="has-children">
-                  <a href="haircut.html">Haircut</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Menu One</a></li>
-                    <li><a href="#">Menu Two</a></li>
-                    <li><a href="#">Menu Three</a></li>
-                  </ul>
+                  <a href="service.php">Haircut</a>
+                   
                 </li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="booking.html">Book Online</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="viewbooking.php">View Bookings</a></li>
+                <li><a href="viewcomplaint.php">View Complaints</a></li>
+
+                <li><a href="staff.php">Staff</a></li>
+                <li><a href="Logout.php">Logout</a></li>
               </ul>
             </nav>
           </div>
@@ -169,8 +158,7 @@
               <h5 class="text-white font-weight-light text-uppercase">Welcome to Hairsal</h5>
               <h2 class="text-white font-weight-light mb-2 display-1">Hair Salon Expert</h2>
 
-              <p><a href="#" class="btn btn-black py-3 px-5">Book Now!</a></p>
-            </div>
+             </div>
           </div>
         </div>
       </div>  
@@ -182,8 +170,7 @@
             <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
               <h2 class="text-white font-weight-light mb-2 display-1">Beautiful Hair, Healthy You!</h2>
 
-              <p><a href="#" class="btn btn-black py-3 px-5">Book Now!</a></p>
-            </div>
+             </div>
           </div>
         </div>
       </div>  
