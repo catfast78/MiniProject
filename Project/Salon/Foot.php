@@ -16,12 +16,7 @@
                 <h3 class="footer-heading mb-4">Quick Menu</h3>
               </div>
               <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Barbers</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Team</a></li>
-                </ul>
+                
               </div>
               <div class="col-md-6 col-lg-6">
                 <ul class="list-unstyled">
@@ -41,7 +36,7 @@
            
 
             <div class="mb-5">
-              <h3 class="footer-heading mb-2">Subscribe Newsletter</h3>
+              <!--<h3 class="footer-heading mb-2">Subscribe Newsletter</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit minima minus odio.</p>
 
               <form action="#" method="post">
@@ -51,7 +46,7 @@
                     <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
                   </div>
                 </div>
-              </form>
+              </form>-->
 
             </div>
 
