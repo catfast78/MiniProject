@@ -252,16 +252,16 @@
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="row mb-5">
               <div class="col-md-12">
-                <h3 class="footer-heading mb-4">Quick Menu</h3>
+                <!--<h3 class="footer-heading mb-4">Quick Menu</h3>-->
               </div>
-              <div class="col-md-6 col-lg-6">
+              <!--<div class="col-md-6 col-lg-6">
                 <ul class="list-unstyled">
                   <li><a href="#">Home</a></li>
                   <li><a href="#">Barbers</a></li>
                   <li><a href="#">News</a></li>
                   <li><a href="#">Team</a></li>
                 </ul>
-              </div>
+              </div>-->
               <div class="col-md-6 col-lg-6">
                 <ul class="list-unstyled">
                   <li><a href="#">About Us</a></li>
@@ -276,7 +276,7 @@
 
           </div>
 
-          <div class="col-lg-4 mb-5 mb-lg-0">
+          <!--<div class="col-lg-4 mb-5 mb-lg-0">
            
 
             <div class="mb-5">
@@ -294,7 +294,7 @@
 
             </div>
 
-          </div>
+          </div>-->
           
         </div>
         <div class="row pt-5 mt-5 text-center">
@@ -308,7 +308,7 @@
 
             <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+           | Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | <a href="https://colorlib.com" target="_blank" ></a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>

@@ -202,10 +202,7 @@ button{
         <input type="password" name="txt_pwd" placeholder="Password" id="password">
 
         <button name="btn_submit">Log In</button>
-        <div class="social">
-          <div class="go"><i class="fab fa-google"></i>  Google</div>
-          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
-        </div>
+        
     </form>
 </body>
 </html>
