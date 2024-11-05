@@ -1,88 +1,98 @@
-
 <?php
 include("Head.php");
 include("SessionValidation.php");
-
-
 include("../Assets/Connection/Connection.php");
 
-//session_start();
+$message = "";
 
+if (isset($_POST["btnupdate"])) {
+    $current = $_POST["txtcurrent"];
+    $newpwd = $_POST["txtnew"];
+    $confirm = $_POST["txtconfirm"];
 
-
-$message="";
-	
-	
-	
-if(isset($_POST["btnupdate"]))
-{
-	$current=$_POST["txtcurrent"];
-	$newpwd=$_POST["txtnew"];
-	$confirm=$_POST["txtconfirm"];
-	
-	$selQry="select * from tbl_admin where admin_id='".$_SESSION["adminid"]."' and admin_password='".$current."'";
-  	$result= $con->query($selQry);
-  	if($data=$result->fetch_assoc())
-	{
-		if($newpwd==$confirm)
-		{
-			
-			$insQry ="update tbl_admin set admin_password='".$confirm."' where admin_id='".$_SESSION["adminid"]."'";
-     		if($con->query($insQry))
-	 		{
-					header("location:MyProfile.php");
-	 		}
-		}
-		else
-		{
-				$message="Password not same...";
-		}
-	}
-	else
-	{
-				$message="Please check old password...";
-	}
+    $selQry = "SELECT * FROM tbl_admin WHERE admin_id='" . $_SESSION["adminid"] . "' AND admin_password='" . $current . "'";
+    $result = $con->query($selQry);
+    if ($data = $result->fetch_assoc()) {
+        if ($newpwd == $confirm) {
+            $insQry = "UPDATE tbl_admin SET admin_password='" . $confirm . "' WHERE admin_id='" . $_SESSION["adminid"] . "'";
+            if ($con->query($insQry)) {
+                header("location:MyProfile.php");
+            }
+        } else {
+            $message = "Passwords do not match...";
+        }
+    } else {
+        $message = "Please check your old password...";
+    }
 }
- 		
 ?>
 
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Change Password</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-header {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #343a40;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .alert {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-<a href="HomePage.php">Home</a>
-<form id="form1" name="form1" method="post" action="">
-  <table width="391" height="185" border="1" align="center">
-    <tr>
-      <td>Current Password</td>
-      <td><label for="txtcurrent"></label>
-      <input type="text" name="txtcurrent" id="txtcurrent" /></td>
-    </tr>
-    <tr>
-      <td>New Password</td>
-      <td><label for="txtnew"></label>
-      <input type="text" name="txtnew" id="txtnew" /></td>
-    </tr>
-    <tr>
-      <td>Confirm Password</td>
-      <td><label for="txtconfirm"></label>
-      <input type="text" name="txtconfirm" id="txtconfirm" /></td>
-    </tr>
-    <tr>
-      <td colspan="2" align="center"><input type="submit" name="btnupdate" id="btnupdate" value="Submit" />
-      <input type="reset" name="btncancel" id="btncancel" value="Cancel" /></td>
-    </tr>
-    <tr>
-      <td colspan="2" align="center"><?php echo $message?></td>
-    </tr>
-  </table>
-</form>
+
+<div class="container form-container">
+    <h3 class="form-header">Change Password</h3>
+    <form id="form1" name="form1" method="post" action="">
+        <div class="form-group">
+            <label for="txtcurrent">Current Password</label>
+            <input type="password" class="form-control" name="txtcurrent" id="txtcurrent" required />
+        </div>
+        <div class="form-group">
+            <label for="txtnew">New Password</label>
+            <input type="password" class="form-control" name="txtnew" id="txtnew" required />
+        </div>
+        <div class="form-group">
+            <label for="txtconfirm">Confirm Password</label>
+            <input type="password" class="form-control" name="txtconfirm" id="txtconfirm" required />
+        </div>
+        <div class="form-group text-center">
+            <input type="submit" class="btn btn-primary" name="btnupdate" id="btnupdate" value="Submit" />
+            <input type="reset" class="btn btn-secondary" name="btncancel" id="btncancel" value="Cancel" />
+        </div>
+        <?php if (!empty($message)) : ?>
+            <div class="alert alert-danger" role="alert">
+                <?php echo $message; ?>
+            </div>
+        <?php endif; ?>
+    </form>
+    <div class="text-center mt-3">
+        <a href="HomePage.php">Back to Home</a>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
-<?php include("Foot.php");  ?>
+
+<?php include("Foot.php"); ?>
