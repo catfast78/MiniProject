@@ -275,7 +275,7 @@ include("SessionValidation.php");
               <nav
                 class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex"
               >
-                <div class="input-group">
+                <!-- <div class="input-group">
                   <div class="input-group-prepend">
                     <button type="submit" class="btn btn-search pe-1">
                       <i class="fa fa-search search-icon"></i>
@@ -286,11 +286,11 @@ include("SessionValidation.php");
                     placeholder="Search ..."
                     class="form-control"
                   />
-                </div>
+                </div> -->
               </nav>
 
               <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
-                <li
+               <!-- <li
                   class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none"
                 >
                   <a
@@ -562,7 +562,7 @@ include("SessionValidation.php");
                       </div>
                     </div>
                   </div>
-                </li>
+                </li>-->
 
                 <li class="nav-item topbar-user dropdown hidden-caret">
                   <a
@@ -632,11 +632,10 @@ include("SessionValidation.php");
             >
               <div>
                 <h3 class="fw-bold mb-3">Dashboard</h3>
-                <h6 class="op-7 mb-2">Free Bootstrap 5 Admin Dashboard</h6>
+                <h6 class="op-7 mb-2"></h6>
               </div>
               <div class="ms-md-auto py-2 py-md-0">
-                <a href="#" class="btn btn-label-info btn-round me-2">Manage</a>
-                <a href="#" class="btn btn-primary btn-round">Add Customer</a>
+                 <a href="UserREgistration.php" class="btn btn-primary btn-round">Add Customer</a>
               </div>
             </div>
             <div class="row">
