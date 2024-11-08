@@ -10,7 +10,7 @@ if (isset($_POST["btn_submit"])) {
     $temp = $_FILES["File_photo"]["tmp_name"];
     move_uploaded_file($temp, "../Assets/Files/Users/" . $photo);
 
-    $insQry = "insert into tbl_user(user_name, user_email, user_password, user_photo, user_district, user_place) values('" . $name . "','" . $email . "','" . $pwd . "','" . $photo . "','" . $district . "','" . $place . "')";
+    $insQry = "insert into tbl_user(user_name, user_email, user_password, user_photo, user_district, user_place,user_curdate) values('" . $name . "','" . $email . "','" . $pwd . "','" . $photo . "','" . $district . "','" . $place . "',CURDATE())";
     if ($con->query($insQry)) {
         echo "<div class='alert alert-success text-center'>Inserted successfully!</div>";
     }
@@ -20,11 +20,49 @@ if (isset($_POST["btn_submit"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <title>User Registration</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="../Assets/JQ/jQuery.js"></script>
+
+    <!-- Custom Style for Background Gradient -->
+    <style>
+        /* Yellow Gradient Background */
+        body {
+            background: linear-gradient(135deg, #fceabb, #f8b500);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Center and style the form container */
+        .container {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #f8b500;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #f8b500;
+            border-color: #f8b500;
+        }
+
+        .btn-primary:hover {
+            background-color: #e0a700;
+            border-color: #e0a700;
+        }
+    </style>
 </head>
 
 <body>

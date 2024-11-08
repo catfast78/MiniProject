@@ -12,9 +12,15 @@ if (isset($_POST["btn_submit"])) {
     $data = $result->fetch_assoc();
     $amount = $data["service_price"];
 
-    $insQry = "INSERT INTO tbl_booking(booking_date, booking_time, booking_amount, user_id, service_id) VALUES ('" . $date . "', '" . $time . "', '" . $amount . "', '" . $_SESSION["aid"] . "', '" . $_GET["did"] . "')";
+    $insQry = "INSERT INTO tbl_booking(booking_date, booking_time, booking_amount, user_id, service_id,booking_status,booking_curdate) VALUES ('" . $date . "', '" . $time . "', '" . $amount . "', '" . $_SESSION["aid"] . "', '" . $_GET["did"] . "',1,CURDATE())";
     if ($con->query($insQry)) {
+
         echo "<div class='alert alert-success'>Booking successfully inserted!</div>";
+        ?>
+        <script>
+            window.location="Payment.php?bid=<?php echo $con->insert_id ?>";
+            </script>
+        <?php
     }
 }
 ?>
@@ -69,7 +75,7 @@ if (isset($_POST["btn_submit"])) {
             <form id="form1" name="form1" method="post" action="">
                 <div class="mb-3">
                     <label for="txt_date" class="form-label">Date</label>
-                    <input type="date" name="txt_date" id="txt_date" class="form-control" required />
+                    <input type="date" name="txt_date" id="txt_date" class="form-control" min="<?php echo date("Y-m-d", strtotime("+1 day")); ?>" required />
                 </div>
 
                 <div class="mb-3">

@@ -74,8 +74,8 @@
  
                   </ul>
                 </li>
-                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="MyBooking.php">My Bookings</a></li>
+                                <li><a href="contact.html">Contact</a></li>
                 <li><a href="../Guest/Login.php">Logout</a></li>
                 
               </ul>

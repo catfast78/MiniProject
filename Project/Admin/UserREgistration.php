@@ -10,7 +10,7 @@ if (isset($_POST["btn_submit"])) {
     $temp = $_FILES["File_photo"]["tmp_name"];
     move_uploaded_file($temp, "../Assets/Files/Users/" . $photo);
 
-    $insQry = "insert into tbl_user(user_name, user_email, user_password, user_photo, user_district, user_place) values('" . $name . "','" . $email . "','" . $pwd . "','" . $photo . "','" . $district . "','" . $place . "')";
+    $insQry = "insert into tbl_user(user_name, user_email, user_password, user_photo, user_district, user_place,user_curdate) values('" . $name . "','" . $email . "','" . $pwd . "','" . $photo . "','" . $district . "','" . $place . "',CURDATE())";
     if ($con->query($insQry)) {
         echo "<div class='alert alert-success text-center'>Inserted successfully!</div>";
     }
