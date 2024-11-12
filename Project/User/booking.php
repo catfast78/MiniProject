@@ -7,7 +7,7 @@ include("../Assets/Connection/Connection.php");
 if (isset($_POST["btn_submit"])) {
     $date = $_POST["txt_date"];
     $time = $_POST["txt_time"];
-    $selQry = "SELECT * FROM tbl_service WHERE salon_id=" . $_GET['did'];
+    $selQry = "SELECT * FROM tbl_service WHERE service_id=" . $_GET['did'];
     $result = $con->query($selQry);
     $data = $result->fetch_assoc();
     $amount = $data["service_price"];

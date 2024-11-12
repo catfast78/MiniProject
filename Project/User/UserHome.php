@@ -83,21 +83,21 @@ include("SessionValidation.php");
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li class="has-children active">
-                  <a href="UserHome.php">Profile</a>
+                   Profile 
                   <ul class="dropdown">
                     <li><a href="MyProfile.php">My Profile</a></li>
                      
                   </ul>
                 </li>
                 <li class="has-children">
-                  <a href="haircut.html">Salons</a>
+                  Salons
                   <ul class="dropdown">
                     <li><a href="viewsalon.php">View Salons</a></li>
  
                   </ul>
                 </li>
                  <li><a href="MyBooking.php">My Bookings</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="ViewComplaints.php">Complaints</a></li>
                 <li><a href="Logout.php">Logout</a></li>
                 
               </ul>

@@ -55,7 +55,7 @@ include("../Assets/Connection/Connection.php");
             <th>Service</th>
             <th>Price</th>
             <th>User</th>
-            <th>Action</th>
+        
           </tr>
         </thead>
         <tbody>
@@ -76,9 +76,7 @@ include("../Assets/Connection/Connection.php");
             <td><?php echo $data["service_name"]; ?></td>
             <td><?php echo $data["booking_amount"]; ?></td>
             <td><?php echo $data["user_name"]; ?></td>
-            <td>
-              <button type="button" class="btn btn-sm btn-primary">View</button>
-            </td>
+          
           </tr>
         <?php } ?>
         </tbody>

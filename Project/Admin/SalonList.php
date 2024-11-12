@@ -1,6 +1,15 @@
 <?php
-include("Head.php"); 
+include("Head.php");
 include("../Assets/Connection/Connection.php");
+//session_start();
+
+if (isset($_GET["did"])) {
+    $did = $_GET["did"];
+    $delQry = "DELETE FROM tbl_salon WHERE salon_id=" . $did;
+    if ($con->query($delQry)) {
+        //header("location:ViewSalon.php");
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +17,7 @@ include("../Assets/Connection/Connection.php");
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Booking List</title>
+<title>Verified Salons</title>
 <!-- Bootstrap CSS -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <style>
@@ -17,7 +26,7 @@ include("../Assets/Connection/Connection.php");
         padding-top: 20px;
     }
     .table-container {
-        max-width: 1000px;
+        max-width: 1200px;
         margin: auto;
         padding: 20px;
         background-color: #ffffff;
@@ -34,25 +43,25 @@ include("../Assets/Connection/Connection.php");
 
 <div class="container">
     <div class="table-container">
-        <h3 class="text-center mb-4">Booking List</h3>
+        <h3 class="text-center mb-4">Salons</h3>
+        <div class="mb-3 text-center">
+            <a href="HomePage.php" class="btn btn-secondary btn-sm">HOME</a>
+         </div>
         <form id="form1" name="form1" method="post" action="">
             <table class="table table-bordered table-striped text-center">
                 <thead class="thead-dark">
                     <tr>
                         <th>SI.No.</th>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Service</th>
-                        <th>Price</th>
-                        <th>User</th>
-                        <!--<th>#</th>-->
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                         
+                        <th colspan=2>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    $selQry = "SELECT * FROM tbl_booking b 
-                               INNER JOIN tbl_user u ON b.user_id=u.user_id 
-                               INNER JOIN tbl_service s ON b.service_id=s.service_id where s.salon_id =  ".$_GET['bid'];
+                    $selQry = "SELECT * FROM tbl_salon WHERE salon_status=1";
                     $result = $con->query($selQry);
                     $i = 0;
                     while ($data = $result->fetch_assoc()) {
@@ -60,13 +69,13 @@ include("../Assets/Connection/Connection.php");
                     ?>
                     <tr>
                         <td><?php echo $i; ?></td>
-                        <td><?php echo $data["booking_date"]; ?></td>
-                        <td><?php echo $data["booking_time"]; ?></td>
-                        <td><?php echo $data["service_name"]; ?></td>
-                        <td><?php echo $data["booking_amount"]; ?></td>
-                        <td><?php echo $data["user_name"]; ?></td>
-                       <!-- <td><a href="Details.php?booking_id=<?php echo $data['booking_id']; ?>" class="btn btn-primary btn-sm">Details</a></td>
-                    --></tr>
+                        <td><?php echo $data["salon_name"]; ?></td>
+                        <td><?php echo $data["salon_email"]; ?></td>
+                        <td><?php echo $data["salon_address"]; ?></td>
+                         <td><a href="ViewBooking.php?bid=<?php echo $data["salon_id"]; ?>" class="btn btn-danger btn-sm">Bookings</a></td>
+                        <td><a href="ViewComplaint.php?cid=<?php echo $data["salon_id"]; ?>" class="btn btn-danger btn-sm">Complaints</a></td>
+ 
+                     </tr>
                     <?php
                     }
                     ?>
@@ -83,3 +92,4 @@ include("../Assets/Connection/Connection.php");
 
 </body>
 </html>
+<?php include("Foot.php"); ?>

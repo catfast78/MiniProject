@@ -1,7 +1,7 @@
 <?php
 include("Head.php");
 include("../Assets/Connection/Connection.php");
-session_start();
+//session_start();
 
 if (isset($_GET["did"])) {
     $did = $_GET["did"];
@@ -26,7 +26,7 @@ if (isset($_GET["did"])) {
         padding-top: 20px;
     }
     .table-container {
-        max-width: 1000px;
+        max-width: 1200px;
         margin: auto;
         padding: 20px;
         background-color: #ffffff;
@@ -58,7 +58,7 @@ if (isset($_GET["did"])) {
                         <th>Address</th>
                         <th>Photo</th>
                         <th>Proof</th>
-                        <th>Action</th>
+                        <th colspan=2>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -77,7 +77,9 @@ if (isset($_GET["did"])) {
                         <td><img src="../Assets/Files/<?php echo $data["salon_photo"]; ?>" width="100" class="img-thumbnail" /></td>
                         <td><img src="../Assets/Files/<?php echo $data["salon_proof"]; ?>" width="100" class="img-thumbnail" /></td>
                         <td><a href="Verified.php?did=<?php echo $data["salon_id"]; ?>" class="btn btn-danger btn-sm">Remove</a></td>
-                    </tr>
+                        <td><a href="ViewComplaint.php?cid=<?php echo $data["salon_id"]; ?>" class="btn btn-danger btn-sm">Complaints</a></td>
+ 
+                     </tr>
                     <?php
                     }
                     ?>

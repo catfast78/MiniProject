@@ -126,26 +126,15 @@ include("SessionValidation.php");
         <div class="sidebar-wrapper scrollbar scrollbar-inner">
           <div class="sidebar-content">
             <ul class="nav nav-secondary">
-              <li class="nav-item active">
+            <li class="nav-item active">
                 <a
-                  data-bs-toggle="collapse"
-                  href="#dashboard"
-                  class="collapsed"
+                  href="HomePage.php"
                   aria-expanded="false"
                 >
                   <i class="fas fa-home"></i>
                   <p>Dashboard</p>
-                  <span class="caret"></span>
                 </a>
-                <div class="collapse" id="dashboard">
-                  <ul class="nav nav-collapse">
-                    <li>
-                      <a href="../demo1/index.html">
-                        <span class="sub-item">Dashboard 1</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+               
               </li>
               <li class="nav-section">
                 <span class="sidebar-mini-icon">
@@ -166,11 +155,7 @@ include("SessionValidation.php");
                         <span class="sub-item">List Of Users</span>
                       </a>
                     </li>
-                    <li>
-                      <a href="ViewComplaint.php">
-                        <span class="sub-item">User Complaint</span>
-                      </a>
-                    </li>
+                     
                      
                   </ul>
                 </div>
@@ -183,35 +168,21 @@ include("SessionValidation.php");
                 </a>
                 <div class="collapse" id="sidebarLayouts">
                   <ul class="nav nav-collapse">
+                  <li>
+                      <a href="Verified.php">
+                        <span class="sub-item">Approved Salons</span>
+                      </a>
+                    </li>
                     <li>
                       <a href="ViewSalon.php">
                         <span class="sub-item">List Of Salons</span>
                       </a>
                     </li>
-                    <li>
-                      <a href="SalonVerification.php">
-                        <span class="sub-item">SalonVerification</span>
-                      </a>
-                    </li>
+                   
                   </ul>
                 </div>
               </li>
-              <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#forms">
-                  <i class="fas fa-pen-square"></i>
-                  <p>Bookings</p>
-                  <span class="caret"></span>
-                </a>
-                <div class="collapse" id="forms">
-                  <ul class="nav nav-collapse">
-                    <li>
-                      <a href="ViewBooking.php">
-                        <span class="sub-item">View Bookings</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
+              
               <li class="nav-item">
                 <a data-bs-toggle="collapse" href="#tables">
                   <i class="fas fa-table"></i>
@@ -679,13 +650,15 @@ include("SessionValidation.php");
                       </div>
                       <div class="col col-stats ms-3 ms-sm-0">
                         <div class="numbers">
-                          <p class="card-category">Booking</p>
-                          <?php  $selBooking="select count(*)  as total from  tbl_booking";
-                          $res=$con->query($selBooking);
-                          $data=$res->fetch_assoc();
+                          <a href="SalonList.php">
+                           <p class="card-category">Salons</p>
+                           <?php  $selSalon="select count(*)  as total from  tbl_salon";
+                           $res=$con->query($selSalon);
+                           $data=$res->fetch_assoc();
                         
-                          ?>
-                          <h4 class="card-title"><?php echo $data["total"]; ?></h4>
+                           ?>
+                           <h4 class="card-title"><?php echo $data["total"]; ?></h4>
+                          </a>
                         </div>
                       </div>
                     </div>

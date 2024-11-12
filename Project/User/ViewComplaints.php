@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include("Head.php");
 include("../Assets/Connection/Connection.php");
 
@@ -53,7 +54,7 @@ if($salon_id <= 0) {
                         <th>Content</th>
                         <th>User</th>
                         <th>Date</th>
-                        <th>Action</th>
+                        <th>Reply</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -61,7 +62,7 @@ if($salon_id <= 0) {
                     // Fetch complaints for the specific salon
                     $query = "SELECT *
                               FROM tbl_complaint c 
-                             Inner JOIN tbl_user u  ON c.user_id = u.user_id where c.salon_id = ".$_GET['cid']."   
+                             Inner JOIN tbl_user u  ON c.user_id = u.user_id  where u.user_id = ".$_SESSION['aid']."    
                                 ORDER BY c.complaint_date DESC"; // Using a prepared statement for security
                     $result = $con->query($query);
                    
@@ -74,7 +75,7 @@ if($salon_id <= 0) {
                             echo "<td>" . htmlspecialchars($row['complaint_content']) . "</td>";
                             echo "<td>" . htmlspecialchars($row['user_name']) . "</td>";
                             echo "<td>" . $row['complaint_date'] . "</td>";
-                            echo "<td><a href='Reply.php?complaint_id=" . $row['complaint_id'] . "' class='btn btn-primary btn-sm'>Reply</a></td>";
+                            echo "<td>".  $row['complaint_reply'] ." </td>";
                             echo "</tr>";
                         }
                     } else {

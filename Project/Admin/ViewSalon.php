@@ -1,7 +1,8 @@
 <?php
+ob_start();
 include("Head.php");
 include("../Assets/Connection/Connection.php");
-session_start();
+//session_start();
 
 if (isset($_GET["aid"])) {
     $aid = $_GET["aid"];
@@ -107,4 +108,5 @@ if (isset($_GET["did"])) {
 </body>
 </html>
 
-<?php include("Foot.php"); ?>
+<?php include("Foot.php");
+ ob_flush(); ?>

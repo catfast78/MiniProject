@@ -20,7 +20,7 @@ if (isset($_POST["btn_submit"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+     <meta charset="UTF-8">
     <title>User Registration</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -65,8 +65,13 @@ if (isset($_POST["btn_submit"])) {
     </style>
 </head>
 
-<body>
+<body> 
+  
+
 <div class="container mt-5">
+<div >
+        <a href="../index.php">Home</a>
+            </div>
     <h2 class="text-center mb-4">User Registration</h2>
     <form id="form1" name="form1" method="post" action="" enctype="multipart/form-data">
         <div class="form-group">
@@ -121,6 +126,9 @@ if (isset($_POST["btn_submit"])) {
             <button type="submit" class="btn btn-primary" name="btn_submit" id="btn_submit">Submit</button>
             <button type="reset" class="btn btn-secondary" name="btn_cancel" id="btn_cancel">Cancel</button>
         </div>
+        <div class="text-center p-3">
+        <a href="Login.php">Login</a>
+            </div>
     </form>
 </div>
 
