@@ -1,7 +1,11 @@
-<!DOCTYPE html>
+
+<?php
+include("SessionValidation.php");
+
+?><!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>User Home&mdash; Colorlib Website Template</title>
+    <title>User Home&mdash;  </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -64,7 +68,7 @@
                   </ul>
                 </li>
                 <li class="has-children">
-                  <a href="haircut.html">Salons</a>
+                   Salons 
                   <ul class="dropdown">
                     <li><a href="viewsalon.php">View Salons</a></li>
  
@@ -79,7 +83,7 @@
           </div>
 
           <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
-            <div class="d-none d-xl-inline-block">
+            <!--<div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
                 <li>
                   <a href="#" class="pl-0 pr-3 text-black"><span class="icon-facebook"></span></a>
@@ -94,7 +98,7 @@
                   <a href="#" class="pl-3 pr-3 text-black"><span class="icon-youtube-play"></span></a>
                 </li>
               </ul>
-            </div>
+            </div>-->
 
             <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 

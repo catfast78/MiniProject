@@ -74,7 +74,7 @@
 
           <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
             <div class="d-none d-xl-inline-block">
-              <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
+              <!--<ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
                 <li>
                   <a href="#" class="pl-0 pr-3 text-black"><span class="icon-facebook"></span></a>
                 </li>
@@ -87,7 +87,7 @@
                 <li>
                   <a href="#" class="pl-3 pr-3 text-black"><span class="icon-youtube-play"></span></a>
                 </li>
-              </ul>
+              </ul>-->
             </div>
 
             <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
@@ -133,22 +133,22 @@
     </div>
 
 
-    <div class="site-section">
+    <!-- <div class="site-section">
       <div class="container">
         <div class="row">
            
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="site-section bg-light">
+    <!-- <div class="site-section bg-light">
        
         </div>
       </div>
-    </div>
+    </div> -->
 
 
-    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(./Assets/Templates/Main/images/hero_bg_2.jpg); background-attachment: fixed;">
+    <!-- <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(./Assets/Templates/Main/images/hero_bg_2.jpg); background-attachment: fixed;">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
 
@@ -156,88 +156,22 @@
             <h2 class="text-white font-weight-light mb-5 display-3">Experience Our Outstanding Services</h2>
            </div>
         </div>
-      </div>
-    </div>  
+</div>
+    </div>   -->
 
     
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="mb-5">
-              <h3 class="footer-heading mb-4">About Hairsal</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
-            </div>
-
-            
-            
-          </div>
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <div class="row mb-5">
-              <div class="col-md-12">
-                <!--<h3 class="footer-heading mb-4">Quick Menu</h3>-->
-              </div>
-              <!--<div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Barbers</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Team</a></li>
-                </ul>
-              </div>-->
-              <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Membership</a></li>
-                </ul>
-              </div>
-            </div>
-
-            
-
-          </div>
-
-          <!--<div class="col-lg-4 mb-5 mb-lg-0">
-           
-
-            <div class="mb-5">
-              <h3 class="footer-heading mb-2">Subscribe Newsletter</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit minima minus odio.</p>
-
-              <form action="#" method="post">
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                  <div class="input-group-append">
-                    <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
-                  </div>
-                </div>
-              </form>
-
-            </div>
-
-          </div>-->
-          
-        </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <div class="mb-5">
-              <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-              <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-              <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-              <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-            </div>
-
-            <p>
+    <footer align="center" style="
+    padding: 15px;
+    background: #333333;
+    color: white;
+">
+      <!-- <div class="container"> -->
+        
+            <!-- <p> -->
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
            | Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | <a href="https://colorlib.com" target="_blank" ></a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-          </div>
-          
-        </div>
-      </div>
+            <!-- </p> -->
     </footer>
   </div>
 

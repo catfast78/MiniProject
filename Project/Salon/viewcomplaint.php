@@ -52,7 +52,7 @@ include("../Assets/Connection/Connection.php");
           <tr>
             <th>SI.No</th>
             <th>Content</th>
-            <th>Status</th>
+             
             <th>Reply</th>
             <th>Date</th>
             <th>User</th>
@@ -70,7 +70,7 @@ include("../Assets/Connection/Connection.php");
           <tr>
             <td><?php echo $i; ?></td>
             <td><?php echo $data["complaint_content"]; ?></td>
-            <td><?php echo $data["complaint_status"]; ?></td>
+             
             <td><?php echo $data["complaint_reply"]; ?></td>
             <td><?php echo $data["complaint_date"]; ?></td>
             <td><?php echo $data["user_name"]; ?></td>

@@ -1,7 +1,8 @@
 
 <?php
 include("../Assets/Connection/Connection.php");
-session_start();
+include("SessionValidation.php");
+// session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -114,7 +115,7 @@ session_start();
                 </div>
               </li>
               <li class="nav-item">
-                <a data-bs-toggle="collapse"  >
+                <a data-bs-toggle="collapse" href="#sidebarLayouts">
                   <i class="fas fa-th-list"></i>
                   <p> Salons</p>
                   <span class="caret"></span>
@@ -122,7 +123,7 @@ session_start();
                 <div class="collapse" id="sidebarLayouts">
                   <ul class="nav nav-collapse">
                   <li>
-                    <a href="Verified.php">
+                      <a href="Verified.php">
                         <span class="sub-item">Approved Salons</span>
                       </a>
                     </li>
@@ -131,7 +132,7 @@ session_start();
                         <span class="sub-item">List Of Salons</span>
                       </a>
                     </li>
-                    
+                   
                   </ul>
                 </div>
               </li>

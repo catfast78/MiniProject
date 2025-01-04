@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Salon Home &mdash; Colorlib Website Template</title>
+    <title>Salon Home &mdash;  </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -68,8 +68,7 @@
                 <li><a href="viewbooking.php">View Bookings</a></li>
                 <li><a href="viewcomplaint.php">View Complaints</a></li>
 
-                <li><a href="staff.php">Staff</a></li>
-                <li><a href="Logout.php">Logout</a></li>
+                 <li><a href="Logout.php">Logout</a></li>
               </ul>
             </nav>
           </div>

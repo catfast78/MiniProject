@@ -578,13 +578,13 @@ include("SessionValidation.php");
                         </div>
                       </li>
                       <li>
-                        <div class="dropdown-divider"></div>
+                        <!--<div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="MyProfile.php">My Profile</a>
                         <a class="dropdown-item" href="#">My Balance</a>
                         <a class="dropdown-item" href="#">Inbox</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Account Setting</a>
-                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-divider"></div>-->
                         <a class="dropdown-item" href="Logout.php">Logout</a>
                       </li>
                     </div>
@@ -606,7 +606,7 @@ include("SessionValidation.php");
                 <h6 class="op-7 mb-2"></h6>
               </div>
               <div class="ms-md-auto py-2 py-md-0">
-                 <a href="UserREgistration.php" class="btn btn-primary btn-round">Add Customer</a>
+                 <a href="UserRE.gistration.php" class="btn btn-primary btn-round">Add Customer</a>
               </div>
             </div>
             <div class="row">
@@ -665,7 +665,7 @@ include("SessionValidation.php");
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-md-3">
+              <!--<div class="col-sm-6 col-md-3">
                 <div class="card card-stats card-round">
                   <div class="card-body">
                     <div class="row align-items-center">
@@ -711,7 +711,7 @@ include("SessionValidation.php");
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>-->
             </div>
             <!--<div class="row">
               <div class="col-md-8">
@@ -1271,7 +1271,7 @@ include("SessionValidation.php");
     <script src="../Assets/Templates/Admin/assets/js/plugin/datatables/datatables.min.js"></script>
 
     <!-- Bootstrap Notify -->
-    <script src="../Assets/Templates/Admin/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <!--<script src="../Assets/Templates/Admin/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>-->
 
     <!-- jQuery Vector Maps -->
     <script src="../Assets/Templates/Admin/assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>

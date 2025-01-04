@@ -3,6 +3,64 @@ ob_start();
 include("Head.php");
 session_start();
 include("../Assets/Connection/Connection.php");
+if(isset($_GET['aid'])){
+  echo $qry="UPDATE tbl_booking set booking_status='1' where booking_id=".$_GET['aid'];
+  if($con->query($qry)){
+    ?>
+    <script>
+      alert("Booking Accpeted")
+      window.location="viewbooking.php"
+    </script>
+    <?php
+  }
+  else{
+    ?>
+<script>
+  alert("Booking Accpeted")
+  window.location="viewbooking.php"
+</script>
+    <?php
+  }
+}
+
+if(isset($_GET['rid'])){
+  $qry="UPDATE tbl_booking set booking_status='1' where booking_id=".$_GET['rid'];
+  if($con->query($qry)){
+    ?>
+    <script>
+      alert("Booking Rejected");
+      window.location="viewbooking.php"
+    </script>
+    <?php
+  }
+  else{
+    ?>
+<script>
+  alert("Booking Accpeted")
+  window.location="viewbooking.php"
+</script>
+    <?php
+  }
+}
+if(isset($_GET['aid'])){
+  $qry="UPDATE FROM tbl_booking set booking_status=1 where booking_id=".$_GET['bid'];
+  if($con->query($qry)){
+    ?>
+    <script>
+      alert("Booking Accpeted")
+      window.location="viewbooking.php"
+    </script>
+    <?php
+  }
+  else{
+    ?>
+<script>
+  alert("Booking Accpeted")
+  window.location="viewbooking.php"
+</script>
+    <?php
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +100,9 @@ include("../Assets/Connection/Connection.php");
 </head>
 
 <body>
+<h5><a href="SalonHome.php">Home</a></h5>
 <div class="container">
+  
   <h1 class="page-title">Bookings</h1>
   <div class="table-container">
     <form id="form1" name="form1" method="post" action="">
@@ -55,6 +115,8 @@ include("../Assets/Connection/Connection.php");
             <th>Service</th>
             <th>Price</th>
             <th>User</th>
+            <th>Status</th>
+            <th>Action</th>
         
           </tr>
         </thead>
@@ -76,7 +138,34 @@ include("../Assets/Connection/Connection.php");
             <td><?php echo $data["service_name"]; ?></td>
             <td><?php echo $data["booking_amount"]; ?></td>
             <td><?php echo $data["user_name"]; ?></td>
-          
+            <td>
+              <?php
+                 if($data['booking_status']==0){
+                  echo "New Booking";
+                }
+                else if($data['booking_status']==1){
+                  echo "Booking Approved. Waiting for Payment";
+                }
+                else if($data['booking_status']==2){
+                  echo "Booking rejected..";
+                }
+                else if($data['booking_status']==3){
+                  echo "Payment Completed";
+                }
+              ?>
+            </td>
+            <td>
+              <?php
+                if($data['booking_status']==0){
+                  ?>
+                    <a href="viewbooking.php?aid=<?php echo $data['booking_id'] ?>">Accept Booking</a>
+                  <br>
+                  <br>
+                    <a href="viewbooking.php?rid=<?php echo $data['booking_id'] ?>">Reject Booking</a>
+                  <?php
+                }
+              ?>
+            </td>
           </tr>
         <?php } ?>
         </tbody>

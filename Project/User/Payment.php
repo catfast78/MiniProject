@@ -6,7 +6,7 @@ ob_start();
 	if(isset($_POST["btn_pay"]))
 	{
 		
-				$a = "update tbl_booking set booking_status='2' where booking_id='".$_GET["bid"]."'";
+				$a = "update tbl_booking set booking_status='3' where booking_id='".$_GET["bid"]."'";
 				if($con->query($a))
 				{
 					

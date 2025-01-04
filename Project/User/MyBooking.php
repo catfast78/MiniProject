@@ -1,7 +1,7 @@
 <?php
 ob_start();
 include("Head.php");
-session_start();
+//session_start();
 include("../Assets/Connection/Connection.php");
 // echo date("Y-m-d", strtotime("+1 day"));
 
@@ -58,7 +58,8 @@ include("../Assets/Connection/Connection.php");
             <th>Time</th>
             <th>Service</th>
             <th>Price</th>
-            <th>User</th>
+            <th>Status</th>
+            <th>Action</th>
             
           </tr>
         </thead>
@@ -79,8 +80,30 @@ include("../Assets/Connection/Connection.php");
             <td><?php echo $data["booking_time"]; ?></td>
             <td><?php echo $data["service_name"]; ?></td>
             <td><?php echo $data["booking_amount"]; ?></td>
-            <td><?php echo $data["user_name"]; ?></td>
-            
+            <td><?php 
+            if($data['booking_status']==0){
+              echo "Waiting for Salon Approval";
+            }
+            else if($data['booking_status']==1){
+              echo "Booking Approved by salon. <br>";
+              ?>
+              
+              <?php
+            }
+            else if($data['booking_status']==2){
+              echo "Sorry! Your booking has been rejected..";
+            }
+            else if($data['booking_status']==3){
+              echo "Booking Completed";
+            }
+            ?></td>
+            <td>
+              <?php if($data['booking_status']==1){?>
+              <a href="Payment.php?bid=<?php echo $data['booking_id'] ?>">Make Payment</a>
+              <?php
+              }
+              ?>
+            </td>
           </tr>
         <?php } ?>
         </tbody>

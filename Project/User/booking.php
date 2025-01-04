@@ -12,13 +12,13 @@ if (isset($_POST["btn_submit"])) {
     $data = $result->fetch_assoc();
     $amount = $data["service_price"];
 
-    $insQry = "INSERT INTO tbl_booking(booking_date, booking_time, booking_amount, user_id, service_id,booking_status,booking_curdate) VALUES ('" . $date . "', '" . $time . "', '" . $amount . "', '" . $_SESSION["aid"] . "', '" . $_GET["did"] . "',1,CURDATE())";
+    $insQry = "INSERT INTO tbl_booking(booking_date, booking_time, booking_amount, user_id, service_id,booking_curdate) VALUES ('" . $date . "', '" . $time . "', '" . $amount . "', '" . $_SESSION["aid"] . "', '" . $_GET["did"] . "',CURDATE())";
     if ($con->query($insQry)) {
 
         echo "<div class='alert alert-success'>Booking successfully inserted!</div>";
         ?>
         <script>
-            window.location="Payment.php?bid=<?php echo $con->insert_id ?>";
+            window.location="MyBooking.php";
             </script>
         <?php
     }
