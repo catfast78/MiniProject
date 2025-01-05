@@ -128,9 +128,7 @@ include("SessionValidation.php");
                       </a>
                     </li>
                     <li>
-                      <a href="ViewSalon.php">
-                        <span class="sub-item">List Of Salons</span>
-                      </a>
+                       
                     </li>
                    
                   </ul>

@@ -80,8 +80,7 @@ include("../Assets/Connection/Connection.php");
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Address</th>
-            <th scope="col">Photo</th>
-            <th scope="col">Proof</th>
+             
             <th scope="col">Action</th>
           </tr>
         </thead>
@@ -98,8 +97,7 @@ include("../Assets/Connection/Connection.php");
             <td><?php echo $data['salon_name']; ?></td>
             <td><?php echo $data['salon_email']; ?></td>
             <td><?php echo $data['salon_address']; ?></td>
-            <td><img src="../Assets/Files/salon/photo/<?php echo $data['salon_photo']; ?>" width="50" /></td>
-            <td><img src="../Assets/Files/salon/Proof/<?php echo $data['salon_proof']; ?>" width="50" /></td>
+             
             <td>
               <a href="viewservice.php?did=<?php echo $data['salon_id']; ?>" class="btn btn-sm btn-primary">Services</a>
               <a href="complaint.php?cid=<?php echo $data['salon_id']; ?>" class="btn btn-sm btn-danger">Complaints</a>
