@@ -25,6 +25,11 @@ ob_start();
 				}
 			
 	}
+
+	$selBooking="SELECT * from tbl_booking where booking_id=".$_GET['bid'];
+    $res=$con->query($selBooking);
+    $data=$res->fetch_assoc();
+    $amt=$data['booking_amount'];
 	
 	?>
 <!DOCTYPE html>
@@ -204,8 +209,8 @@ ob_start();
 			</div>
 			<div class="input-group">
 				<div class="input-box">
-					<input class="name" type="email" name="txtemail" id="txtemail" placeholder="Email Address" required>
-					<i class="fa fa-envelope icon" aria-hidden="true"></i>
+					<input class="name" type="text" name="txtemail" id="txtemail" readonly value="<?php echo $amt ?>" required>
+					<i class="fa fa-money-bill icon" aria-hidden="true"></i>
 				</div>
 			</div>	
 			<div class="input-group">

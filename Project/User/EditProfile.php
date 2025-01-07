@@ -2,7 +2,7 @@
 ob_start();
 include("Head.php");
 include("../Assets/Connection/Connection.php");
-session_start();
+//session_start();
 
 $selQry = "SELECT * FROM tbl_user WHERE user_id='" . $_SESSION["aid"] . "'";
 $result = $con->query($selQry);

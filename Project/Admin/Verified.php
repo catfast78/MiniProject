@@ -74,8 +74,8 @@ if (isset($_GET["did"])) {
                         <td><?php echo $data["salon_name"]; ?></td>
                         <td><?php echo $data["salon_email"]; ?></td>
                         <td><?php echo $data["salon_address"]; ?></td>
-                        <td><img src="../Assets/Files/<?php echo $data["salon_photo"]; ?>" width="100" class="img-thumbnail" /></td>
-                        <td><img src="../Assets/Files/<?php echo $data["salon_proof"]; ?>" width="100" class="img-thumbnail" /></td>
+                        <td><img src="../Assets/Files/salon/photo/<?php echo $data["salon_photo"]; ?>" width="100" class="img-thumbnail" /></td>
+                        <td><img src="../Assets/Files/salon/Proof/<?php echo $data["salon_proof"]; ?>" width="100" class="img-thumbnail" /></td>
                         <td><a href="Verified.php?did=<?php echo $data["salon_id"]; ?>" class="btn btn-danger btn-sm">Remove</a></td>
                         <td><a href="ViewComplaint.php?cid=<?php echo $data["salon_id"]; ?>" class="btn btn-danger btn-sm">Complaints</a></td>
  

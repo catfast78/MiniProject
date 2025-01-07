@@ -1,9 +1,10 @@
 <?php
 include("Head.php");
+include("../Assets/Connection/Connection.php");
+ob_start();
 $dname = "";
 $eid = 0;
 
-include("../Assets/Connection/Connection.php");
 
 if (isset($_POST["btn_submit"])) {
     $dname = $_POST["txt_dname"];

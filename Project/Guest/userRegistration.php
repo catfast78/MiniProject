@@ -10,9 +10,36 @@ if (isset($_POST["btn_submit"])) {
     $temp = $_FILES["File_photo"]["tmp_name"];
     move_uploaded_file($temp, "../Assets/Files/Users/" . $photo);
 
-    $insQry = "insert into tbl_user(user_name, user_email, user_password, user_photo, user_district, user_place,user_curdate) values('" . $name . "','" . $email . "','" . $pwd . "','" . $photo . "','" . $district . "','" . $place . "',CURDATE())";
-    if ($con->query($insQry)) {
+
+    $errors = [];  
+
+    if (!preg_match('/^[A-Z][a-zA-Z ]*$/', $name)) {
+        $errors[] = "Name must start with an uppercase letter and contain only alphabets and spaces.";
+    }
+
+    
+    // Email validation
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Invalid email format.";
+    }
+
+    // Password validation 
+    if (!preg_match('/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$/', $pwd)) {
+        $errors[] = "Password must be at least 8 characters long and include one uppercase letter, one lowercase letter, one number, and one special character.";
+    }
+    if (empty($errors)) {
+
+     $insQry = "insert into tbl_user(user_name, user_email, user_password, user_photo, user_district, user_place,user_curdate) values('" . $name . "','" . $email . "','" . $pwd . "','" . $photo . "','" . $district . "','" . $place . "',CURDATE())";
+   
+     if ($con->query($insQry)) {
         echo "<div class='alert alert-success text-center'>Inserted successfully!</div>";
+     }
+    } 
+     else {
+     // Display validation errors
+      foreach ($errors as $error) {
+        echo "<script>alert('$error');</script>";
+     }
     }
 }
 ?>

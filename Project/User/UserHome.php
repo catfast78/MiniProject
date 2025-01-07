@@ -166,96 +166,8 @@ include("SessionValidation.php");
     </div>
 
 
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-4 text-center">
-            <h3 class="line-height-1 mb-3"><span class="d-block display-4 line-height-1 text-black">Welcome to</span> <span class="d-block display-4 line-height-1"><em class="text-primary font-weight-bold">Hair Salon</em></span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt architecto ab hic rem placeat eius commodi eum eligendi recusandae sed qui cumque quibusdam.</p>
-            <p><a href="#"><small class="text-uppercase font-weight-bold">Read More</small></a></p>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <figure class="h-100 hover-bg-enlarge">
-              <div class="bg-image h-100 bg-image-md-height" style="background-image: url('../Assets/Templates/Main/images/img_2.jpg');"></div>
-            </figure>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="border p-4 d-flex align-items-center justify-content-center h-100">
-              <div class="text-center">
-                <h2 class="text-primary h2 mb-5">Opening Hours</h2>
-                <p class="mb-4">
-                  <span class="d-block font-weight-bold">Mon – Fri </span>
-                  10:00 AM – 8:30 PM
-                </p>
 
-                <p class="mb-4">
-                  <span class="d-block font-weight-bold">Saturday</span>
-                  Closed
-                </p>
-
-                <p class="mb-4">
-                  <span class="d-block font-weight-bold">Sunday</span>
-                  10:00 AM – 8:30 PM
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="site-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7">
-            <h2 class="site-section-heading font-weight-light text-black text-center">Featured Services</h2>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-4 text-center mb-5 mb-lg-5">
-            <div class="h-100 p-4 p-lg-5 bg-light site-block-feature-7">
-              <span class="icon flaticon-razor display-3 text-primary mb-4 d-block"></span>
-              <h3 class="text-black h4">Barber Razor</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</p>
-              <p><strong class="font-weight-bold text-primary">$29</strong></p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 text-center mb-5 mb-lg-5">
-            <div class="h-100 p-4 p-lg-5 bg-light site-block-feature-7">
-              <span class="icon flaticon-location-pin display-3 text-primary mb-4 d-block"></span>
-              <h3 class="text-black h4">Location Pin</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</p>
-              <p><strong class="font-weight-bold text-primary">$46</strong></p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 text-center mb-5 mb-lg-5">
-            <div class="h-100 p-4 p-lg-5 bg-light site-block-feature-7">
-              <span class="icon flaticon-shave display-3 text-primary mb-4 d-block"></span>
-              <h3 class="text-black h4">Barber Shave</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</p>
-              <p><strong class="font-weight-bold text-primary">$24</strong></p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="site-section bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 mb-5">
-            <img src="../Assets/Templates/Main/images/person_1.jpg" alt="Image" class="img-md-fluid">
-          </div>
-          <div class="col-lg-6 bg-white p-md-5 align-self-center">
-            <h2 class="display-1 text-black line-height-1 site-section-heading mb-4 pb-3">New hairstyle!</h2>
-            <p class="text-black lead"><em>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem quisquam laudantium, incidunt id laborum, tempora aliquid labore minus. Nemo maxime, veniam! Fugiat odio nam eveniet ipsam atque, corrupti porro&rdquo;</em></p>
-            <p class="lead text-black">&mdash; <em>Stellla Martin</em></p>
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
 
      
@@ -265,24 +177,29 @@ include("SessionValidation.php");
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
-            <div class="mb-5">
+           <!-- <div class="mb-5">
               <h3 class="footer-heading mb-4">About Hairsal</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
-            </div>
+            </div>-->
 
             
             
           </div>
           <div class="col-lg-4 mb-5 mb-lg-0">
             <div class="row mb-5">
-              
+              <div class="col-md-12">
+                <!--<h3 class="footer-heading mb-4">Quick Menu</h3>-->
+              </div>
               <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
+                
+              </div>
+              <div class="col-md-6 col-lg-6">
+               <!-- <ul class="list-unstyled">
                   <li><a href="#">About Us</a></li>
                   <li><a href="#">Privacy Policy</a></li>
                   <li><a href="#">Contact Us</a></li>
                   <li><a href="#">Membership</a></li>
-                </ul>
+                </ul>-->
               </div>
             </div>
 
@@ -294,7 +211,7 @@ include("SessionValidation.php");
            
 
             <div class="mb-5">
-              <h3 class="footer-heading mb-2">Subscribe Newsletter</h3>
+              <!--<h3 class="footer-heading mb-2">Subscribe Newsletter</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit minima minus odio.</p>
 
               <form action="#" method="post">
@@ -304,25 +221,25 @@ include("SessionValidation.php");
                     <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
                   </div>
                 </div>
-              </form>
+              </form>-->
 
             </div>
 
           </div>
           
         </div>
-        <div class="row pt-5 mt-5 text-center">
+        <!--<div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
             <div class="mb-5">
               <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
               <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
               <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
               <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-            </div>
+            </div>-->
 
-            <p>
+            <p class="text-center">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved |         
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>

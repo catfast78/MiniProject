@@ -1,7 +1,7 @@
 <?php
 ob_start();
 include("Head.php");
-session_start();
+//session_start();
 include("../Assets/Connection/Connection.php");
 
 if (isset($_POST["btn_submit"])) {

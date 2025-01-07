@@ -45,8 +45,8 @@ if (isset($_POST["btn_submit"])) {
         move_uploaded_file($tempproof, "../Assets/Files/salon/Proof/" . $proof);
         
         // Insert into database
-        $stmt = $con->prepare("INSERT INTO tbl_salon (salon_name, salon_email, salon_address, salon_district, salon_place, salon_photo, salon_proof, salon_password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssssss", $name, $email, $address, $district, $place, $photo, $proof, $hashed_password);
+        $stmt = $con->prepare("INSERT INTO tbl_salon (salon_name, salon_email, salon_address, salon_district, salon_place, salon_photo, salon_proof, salon_password,salon_contact) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssssss", $name, $email, $address, $district, $place, $photo, $proof, $hashed_password,,$contact);
         
         if ($stmt->execute()) {
             echo "<div class='alert alert-success'>Inserted successfully!</div>";

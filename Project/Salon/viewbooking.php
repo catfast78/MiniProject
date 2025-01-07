@@ -24,7 +24,7 @@ if(isset($_GET['aid'])){
 }
 
 if(isset($_GET['rid'])){
-  $qry="UPDATE tbl_booking set booking_status='1' where booking_id=".$_GET['rid'];
+  $qry="UPDATE tbl_booking set booking_status='2' where booking_id=".$_GET['rid'];
   if($con->query($qry)){
     ?>
     <script>

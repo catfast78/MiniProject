@@ -144,9 +144,9 @@ include("SessionValidation.php");
                 <div class="collapse" id="tables">
                   <ul class="nav nav-collapse">
                     <li>
-                      <a href="DistrictRegistration.php">
+                      <!-- <a href="DistrictRegistration.php">
                         <span class="sub-item">Districts</span>
-                      </a>
+                      </a> -->
                     </li>
                     <li>
                       <a href="Place.php">

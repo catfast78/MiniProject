@@ -62,7 +62,7 @@
                     
                 </li>
                 <li class="has-children">
-                  <a href="service.php">Haircut</a>
+                  <a href="service.php">Services</a>
                    
                 </li>
                 <li><a href="viewbooking.php">View Bookings</a></li>
@@ -74,7 +74,7 @@
           </div>
 
           <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
-            <div class="d-none d-xl-inline-block">
+            <!-- <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
                 <li>
                   <a href="#" class="pl-0 pr-3 text-black"><span class="icon-facebook"></span></a>
@@ -89,7 +89,7 @@
                   <a href="#" class="pl-3 pr-3 text-black"><span class="icon-youtube-play"></span></a>
                 </li>
               </ul>
-            </div>
+            </div> -->
 
             <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 

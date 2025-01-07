@@ -2,6 +2,7 @@
 ob_start();
 include("Head.php");
 include("../Assets/Connection/Connection.php");
+
 //session_start();
 ?>
 
@@ -80,7 +81,7 @@ include("../Assets/Connection/Connection.php");
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Address</th>
-             
+            <th scope="col">Contact</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
@@ -97,7 +98,7 @@ include("../Assets/Connection/Connection.php");
             <td><?php echo $data['salon_name']; ?></td>
             <td><?php echo $data['salon_email']; ?></td>
             <td><?php echo $data['salon_address']; ?></td>
-             
+            <td><?php echo $data['salon_contact']; ?></td>
             <td>
               <a href="viewservice.php?did=<?php echo $data['salon_id']; ?>" class="btn btn-sm btn-primary">Services</a>
               <a href="complaint.php?cid=<?php echo $data['salon_id']; ?>" class="btn btn-sm btn-danger">Complaints</a>

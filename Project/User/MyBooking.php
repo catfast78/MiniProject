@@ -1,10 +1,7 @@
 <?php
+include("../Assets/Connection/Connection.php");
 ob_start();
 include("Head.php");
-//session_start();
-include("../Assets/Connection/Connection.php");
-// echo date("Y-m-d", strtotime("+1 day"));
-
 
 ?>
 <!DOCTYPE html>
@@ -117,5 +114,5 @@ include("../Assets/Connection/Connection.php");
 </html>
 <?php
 ob_flush();
-include("Head.php");
+include("Foot.php");
 ?>

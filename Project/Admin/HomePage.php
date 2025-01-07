@@ -190,9 +190,9 @@ include("SessionValidation.php");
                 <div class="collapse" id="tables">
                   <ul class="nav nav-collapse">
                     <li>
-                      <a href="DistrictRegistration.php">
+                      <!-- <a href="DistrictRegistration.php">
                         <span class="sub-item">Districts</span>
-                      </a>
+                      </a> -->
                     </li>
                     <li>
                       <a href="Place.php">
@@ -603,9 +603,9 @@ include("SessionValidation.php");
                 <h3 class="fw-bold mb-3">Dashboard</h3>
                 <h6 class="op-7 mb-2"></h6>
               </div>
-              <div class="ms-md-auto py-2 py-md-0">
+              <!-- <div class="ms-md-auto py-2 py-md-0">
                  <a href="UserRE.gistration.php" class="btn btn-primary btn-round">Add Customer</a>
-              </div>
+              </div> -->
             </div>
             <div class="row">
               <div class="col-sm-6 col-md-3">
@@ -927,7 +927,7 @@ include("SessionValidation.php");
                 </div>
               </div>
             </div>-->
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-md-4">
                 <div class="card card-round">
                   <div class="card-body">
@@ -980,7 +980,7 @@ include("SessionValidation.php");
                    
                   <div class="card-body p-0">
                     <div class="table-responsive">
-                      <!-- Projects table -->
+                      Projects table 
                        <?php  $sql_pay = "SELECT booking_id, booking_curdate, booking_amount, booking_status FROM tbl_booking";
                               $result_pay = $con->query($sql_pay);  ?> 
                        
@@ -1021,7 +1021,7 @@ include("SessionValidation.php");
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <!--<footer class="footer">
